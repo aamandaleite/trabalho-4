@@ -4,6 +4,7 @@ import { FlatList, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Informacoes from '../components/Informacoes';
 import tw from 'twrnc';
+import BotaoAtualizar from '../components/BotaoAtualizar';
 
 const Inicial = () => {
   const [person, setPerson] = useState([]);
@@ -28,6 +29,8 @@ const Inicial = () => {
         renderItem={({ item }) => <Informacoes person={item} />}
         keyExtractor={(p) => p.nat}
       />
+
+      <BotaoAtualizar />
     </SafeAreaView>
   );
 };
